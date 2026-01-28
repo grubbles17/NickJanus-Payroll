@@ -52,7 +52,7 @@ public class PayrollCalculator {
             System.out.println("-----Total Calculations----");
             System.out.println(" ");
             System.out.printf("Work Hours: %.2f%n", hoursWorked);
-            System.out.printf("Overtime Rate: $%.2f%n", overtimePay);
+            System.out.printf( "Overtime Rate: $%.2f%n", overtimePay);
             System.out.printf("Hourly Rate: $%.2f%n", hourlyPay);
             System.out.printf("Gross Pay: $%.2f%n", grossPay);
             System.out.printf("Tax (%.0f%%): -$%.2f%n", taxPay * 100, taxAmount);
@@ -61,9 +61,10 @@ public class PayrollCalculator {
             System.out.printf("Net Pay: $%.2f%n", netPay);
 
         } catch (InputMismatchException e) {
-            System.out.println("Invalid input. Please enter numeric values only.");
+            System.out.println("Enter positive numbers only.");
         } finally {
             scanner.close();
         }
     }
 }
+
